@@ -21,13 +21,13 @@ function convertToWord(letter) {
 }
 
 function win(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
+    const smallUserWord = "🧑‍🦱".fontsize(3).sub();
+    const smallCompWord = "🤖".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${(smallUserWord)} beats ${convertToWord(computerChoice)}${(smallCompWord)}. You win! 🔥 "`;
+    result_p.innerHTML = `${(smallUserWord)}${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}${(smallCompWord)}. You win! 🔥 `;
     userChoice_div.classList.add('green-glow');
     setTimeout(() => document.getElementById(userChoice).classList.remove('green-glow') , 300);
 }
@@ -35,23 +35,23 @@ function win(userChoice, computerChoice) {
 
 
 function lose(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
+    const smallUserWord = "🧑‍🦱".fontsize(3).sub();
+    const smallCompWord = "🤖".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${(smallUserWord)} loses to ${convertToWord(computerChoice)}${(smallCompWord)}. You lost... "`;
+    result_p.innerHTML = `${(smallUserWord)}${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}${(smallCompWord)}. You lost...`;
     userChoice_div.classList.add('red-glow');
     setTimeout(() => document.getElementById(userChoice).classList.remove('red-glow'), 300);
 }
 
 
 function draw(userChoice, computerChoice) {
-    const smallUserWord = "user".fontsize(3).sub();
-    const smallCompWord = "comp".fontsize(3).sub();
+    const smallUserWord = "🧑‍🦱".fontsize(3).sub();
+    const smallCompWord = "🤖".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${(smallUserWord)} ties ${convertToWord(computerChoice)}${(smallCompWord)}. It's a Draw! "`;
+    result_p.innerHTML = `${(smallUserWord)}${convertToWord(userChoice)} ties ${convertToWord(computerChoice)}${(smallCompWord)}. It's a Draw! `;
     userChoice_div.classList.add('yellow-glow');
     setTimeout(() => document.getElementById(userChoice).classList.remove('yellow-glow') , 300);
 }
